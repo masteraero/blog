@@ -1,0 +1,20 @@
+a:link {color:#0202F5;}    /* unvisited link */
+a:visited {color:#000000;} /* visited link */
+a:hover {color:#F5F502;}   /* mouse over link */
+a:active {color:#0000FF;}  /* selected link */
+
+.foot{
+	font-size: 10px;
+	text-align: bottom;
+}
+
+body {background-color:#ADEAE3;}
+
+.center {
+	text-align:center;
+}
+
+.left
+{
+	text-align:left;
+}

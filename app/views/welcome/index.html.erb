@@ -1,6 +1,9 @@
 
+<style>
+.welcome {color:red;}
+</style>
 <% if @first_visit == true %>
-	<center><h2>Welcome to my site!</h2></center>
+	<center><h2 class="welcome">Welcome to my site!</h2></center>
 <%else @first_visit == false %>
 	<center><h2>Welcome Back!</h2></center>
 <% end %>
