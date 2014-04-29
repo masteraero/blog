@@ -4,6 +4,7 @@ Blog::Application.routes.draw do
   get "news", to: "news#index", as: 'news'
   get "resume", to: "resume#index", as: 'resume'
   get "portfolio", to: "portfolio#index", as: 'portfolio'
+  get "portfolio/gallery", to: "portfolio#gallery", as: "portgal" 
   # get "/", to: "welcome#index"
   root "welcome#index"
   get "sitemap", to: "sitemap#index", as: 'sitemap'

@@ -1,4 +1,9 @@
+
+<% if @first_visit == true %>
+	<center><h2>Welcome to my site!</h2></center>
+<%else @first_visit == false %>
+	<center><h2>Welcome Back!</h2></center>
+<% end %>
 <body>
-<center><h1>Welcome</h1></center>
 <p><font face="comic sans" color="green" size="3"> <strong><marquee>Hello world</marquee></strong></font></p>
 </body>

@@ -3,8 +3,8 @@
 
 
 <ul>
-	<%['IMG_01.jpg','IMG_02.jpg','IMG_03.jpg','IMG_04.jpg'].each do |images|%>
-	<li><%= image_tag(images)%></li>
+	<% @image_names.each do |images|%>
+	<li><%= image_tag(images + '.jpg')%></li>
 	<% end %>
 </ul>
 <style>
