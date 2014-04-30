@@ -1,12 +1,12 @@
 
-<style>
-.welcome {color:red;}
-</style>
+<body>
 <% if @first_visit == true %>
 	<center><h2 class="welcome">Welcome to my site!</h2></center>
 <%else @first_visit == false %>
 	<center><h2>Welcome Back!</h2></center>
+	<center><%= link_to(image_tag("IMG_05.jpg"), sitemap_path)%></center>
 <% end %>
-<body>
-<p><font face="comic sans" color="green" size="3"> <strong><marquee>Hello world</marquee></strong></font></p>
+<footer>
+<p class="footer"> <%= @shown_message%></p>
+</footer>
 </body>
