@@ -1,12 +1,32 @@
 
 <body>
-<% if @first_visit == true %>
+	<%= form_tag("/say_hi") do %>
+		<%= label_tag('my_name', "Your Name")%>
+		<%= text_field_tag('my_name')%>
+		<%= label_tag('my_password', "Your Password")%>
+		<%= text_field_tag('my_password')%>
+		<%= submit_tag("Submit")%>
+	<%end%>
+<!--<%= form_tag %>
+<%= radio_button_tag('color', "purple")%>
+<%= label_tag('purple', "Purple") %>
+<%= radio_button_tag('color', "red") %>
+<%= label_tag('red', "Red") %>
+<%= radio_button_tag('color', "yellow") %>
+<%= label_tag('yellow', "Yellow") %>
+<%= submit_tag("Submit")%> -->
+
+
+	<% if session['admin'] == true%>
+		<center><p>Welcome Back Admin!</p></center>
+	<%elsif session['admin'] == false %>
+	<%end%>
 	<center><h2 class="welcome">Welcome to my site!</h2></center>
-<%else @first_visit == false %>
 	<center><h2>Welcome Back!</h2></center>
 	<center><%= link_to(image_tag("IMG_05.jpg"), sitemap_path)%></center>
-<% end %>
 <footer>
-<p class="footer"> <%= @shown_message%></p>
+<p class="footer"><%= @shown_message%></p>
 </footer>
 </body>
+
+

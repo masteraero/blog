@@ -11,6 +11,8 @@ Blog::Application.routes.draw do
   get "aboutme", to: "aboutme#index", as: 'aboutme'
   get "aboutme/dogs", to: "aboutme#dogs", as: 'dogs'
   get "welcome", to: "welcome#index", as: 'welcome'
+  post 'say_hi', to: 'welcome#say_hi'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
