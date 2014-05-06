@@ -6,6 +6,15 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%if session['color'] == 'purple'%>
+  <style>body
+{
+background-color:purple;
+}</style>
+<%elsif session['color'] == 'yellow'%>
+<style>body
+{
+background-color:yellow;
+}</style>
   <%end%>
 </head>
 <body>

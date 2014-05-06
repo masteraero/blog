@@ -7,9 +7,9 @@
 		<%= text_field_tag('my_password')%>
 		<%= submit_tag("Submit")%>
 	<%end%>
-	<%= form_tag("/say_hi")do %>
-	<%= label_tag('my_color', 'Pick a color')%>
-	<%= text_field_tag('my_color')
+	<%= form_tag("/say_hi") do %>
+	<%= label_tag('my_color', "Your Color")%>
+	<%= text_field_tag('my_color')%>
 	<%= submit_tag("Submit")%>
 	<%end%>
 	<% if session['admin'] == true%>

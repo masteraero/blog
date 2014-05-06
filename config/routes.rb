@@ -1,5 +1,8 @@
 
 Blog::Application.routes.draw do
+  get "admin/page_one", to: "admin#page_one"
+  get "admin/restricted", to: "admin#restricted", as: 'restricted'
+  get "admin/page_two", to: "admin#page_two"
   get "gallery", to: "gallery#index", as: 'gallery'
   get "news", to: "news#index", as: 'news'
   get "resume", to: "resume#index", as: 'resume'
