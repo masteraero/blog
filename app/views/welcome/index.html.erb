@@ -7,16 +7,11 @@
 		<%= text_field_tag('my_password')%>
 		<%= submit_tag("Submit")%>
 	<%end%>
-<!--<%= form_tag %>
-<%= radio_button_tag('color', "purple")%>
-<%= label_tag('purple', "Purple") %>
-<%= radio_button_tag('color', "red") %>
-<%= label_tag('red', "Red") %>
-<%= radio_button_tag('color', "yellow") %>
-<%= label_tag('yellow', "Yellow") %>
-<%= submit_tag("Submit")%> -->
-
-
+	<%= form_tag("/say_hi")do %>
+	<%= label_tag('my_color', 'Pick a color')%>
+	<%= text_field_tag('my_color')
+	<%= submit_tag("Submit")%>
+	<%end%>
 	<% if session['admin'] == true%>
 		<center><p>Welcome Back Admin!</p></center>
 	<%elsif session['admin'] == false %>
