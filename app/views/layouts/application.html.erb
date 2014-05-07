@@ -6,7 +6,8 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%if session['color'] == 'purple'%>
-  <style>body
+  <style>
+  body
 {
 background-color:purple;
 }</style>
@@ -18,7 +19,8 @@ background-color:yellow;
   <%end%>
 </head>
 <body>
-
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 <footer>
 <p class="foot">Made by Aaron Nealey</p>

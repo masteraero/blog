@@ -1,5 +1,6 @@
 
 Blog::Application.routes.draw do
+  devise_for :users
   get "admin/page_one", to: "admin#page_one"
   get "admin/restricted", to: "admin#restricted", as: 'restricted'
   get "admin/page_two", to: "admin#page_two"
