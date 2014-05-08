@@ -16,15 +16,6 @@ class WelcomeController < ApplicationController
     session[:counter] += 1
   end
   def say_hi
-    @say_hi_name = params['my_name']
-    @say_hi_password = params['my_password']
-    right_password = 'password'
-    right_user = 'aaron'
     session['color'] = params['my_color']
-    if @say_hi_name == right_user && @say_hi_password == right_password
-        session['admin'] = true
-      else
-        session['admin'] = false
-    end
   end
 end
