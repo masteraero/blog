@@ -17,5 +17,13 @@ class WelcomeController < ApplicationController
   end
   def say_hi
     session['color'] = params['my_color']
+    @say_hi_password = params['my_password']
+    right_password = "password"
+    if @say_hi_password == right_password
+      puts "You put in right password"
+      current_user.admin = true
+      current_user.save
+    end
+    redirect_to(welcome_path)
   end
 end
