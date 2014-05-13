@@ -1,8 +1,16 @@
 class ImagesController < ApplicationController
+  before_filter :authenticate_user!
+  before_filter :admin_user
   before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   # GET /images
   # GET /images.json
+  def admin_user
+    if current_user.admin != true
+      redirect_to(welcome_path, alert:"You're not an admin")
+    end
+  end
+  
   def index
     @images = Image.all
   end
