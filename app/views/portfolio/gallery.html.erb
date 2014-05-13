@@ -3,8 +3,9 @@
 
 
 <ul>
-	<% @image_names.each do |images|%>
-	<li><%= image_tag(images + '.jpg')%></li>
+	<% @images.each do |image_record|%>
+	  <li><%= image_tag(image_record.file_name) %></li>
+
 	<% end %>
 </ul>
 <style>

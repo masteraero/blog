@@ -1,5 +1,7 @@
 
 Blog::Application.routes.draw do
+  resources :images
+
   devise_for :users
   get "admin/page_one", to: "admin#page_one"
   get "admin/restricted", to: "admin#restricted", as: 'restricted'
