@@ -5,6 +5,7 @@ Blog::Application.routes.draw do
   resources :images
 
   devise_for :users
+  post "select_theme", to: "welcome#select_theme", as: "select_theme"
   get "admin/page_one", to: "admin#page_one"
   get "admin/restricted", to: "admin#restricted", as: 'restricted'
   get "admin/page_two", to: "admin#page_two"

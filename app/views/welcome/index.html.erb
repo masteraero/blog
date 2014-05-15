@@ -1,22 +1,21 @@
-
+<head>
+</head>
 <body>
-	<% if user_signed_in? && current_user.admin%>
-		You're an admin.
-	<% end %>
+<% if user_signed_in? && current_user.theme %>
+	<%= "Your color is #{current_user.theme.color}"%>
+<%end%>
 	<% if user_signed_in? && !current_user.admin%>
 		<%= form_tag("/say_hi") do %>
-		<%= label_tag('my_password', "Your Admin Password:")%>
-		<%= text_field_tag('my_password')%>
-		<%= submit_tag("Submit")%>
+			<%= label_tag('my_password', "Your Admin Password:")%>
+			<%= text_field_tag('my_password')%>
+			<%= submit_tag("Submit")%>
 		<%end%>
 	<%end%>
-	<%= form_tag("/say_hi") do %>
-		<%= label_tag('my_color', "Your Color")%>
-		<%= text_field_tag('my_color')%>
-		<%= submit_tag("Submit")%>
-	<%end%>
 
-	<center><h2 class="welcome">Welcome to my site!</h2></center>
+		<% if user_signed_in? && current_user.admin%>
+			<p>You're an admin.</p>
+		<% end %>
+
 	<center><%= link_to(image_tag("IMG_05.jpg"), sitemap_path)%></center>
 <footer>
 <p class="footer"><%= @shown_message%></p>
