@@ -26,5 +26,13 @@ Blog::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-  Paperclip.options[:command_path] = "C:\Program Files\ImageMagick-6.8.9-Q16"
+  # Paperclip.options[:command_path] = "C:\Program Files\ImageMagick-6.8.9-Q16"
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['blog1234567'],
+    :access_key_id => ENV['AKIAIAZF5Q3QKJAZVPHQ'],
+    :secret_access_key => ENV['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']
+  }
+}
 end
