@@ -1,7 +1,7 @@
-a:link {color:#0202F5;}    /* unvisited link */
-a:visited {color:#000000;} /* visited link */
-a:hover {color:#F5F502;}   /* mouse over link */
-a:active {color:#0000FF;}  /* selected link */
+/*a:link {color:#0202F5;}*/    /* unvisited link */
+/*a:visited {color:#000000;}*/ /* visited link */
+/*a:hover {color:#F5F502;}*/   /* mouse over link */
+/*a:active {color:#0000FF;}*/  /* selected link */
 
 .foot{
 	font-size: 10px;
@@ -19,3 +19,6 @@ body {background-color:#ADEAE3;}
 	text-align:left;
 }
 
+li.gallery{
+	list-style-type: none;
+}

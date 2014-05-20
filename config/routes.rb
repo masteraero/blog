@@ -6,6 +6,8 @@ Blog::Application.routes.draw do
 
   devise_for :users
   post "select_theme", to: "welcome#select_theme", as: "select_theme"
+  get "images", to: "images", as: "image_upload"
+  get "projects", to: "projects", as: "project_upload"
   get "admin/page_one", to: "admin#page_one"
   get "admin/restricted", to: "admin#restricted", as: 'restricted'
   get "admin/page_two", to: "admin#page_two"
@@ -13,12 +15,10 @@ Blog::Application.routes.draw do
   get "news", to: "news#index", as: 'news'
   get "resume", to: "resume#index", as: 'resume'
   get "portfolio", to: "portfolio#index", as: 'portfolio'
-  get "portfolio/gallery", to: "portfolio#gallery", as: "portgal" 
   # get "/", to: "welcome#index"
   root "welcome#index"
   get "sitemap", to: "sitemap#index", as: 'sitemap'
   get "aboutme", to: "aboutme#index", as: 'aboutme'
-  get "aboutme/dogs", to: "aboutme#dogs", as: 'dogs'
   get "welcome", to: "welcome#index", as: 'welcome'
   post 'say_hi', to: 'welcome#say_hi'
 
