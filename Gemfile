@@ -7,6 +7,7 @@ group :production do
 gem 'rails', '4.0.0'
 gem 'devise'
 gem 'paperclip', '~> 3.4.1'
+gem 'aws-sdk'
 
 # Use sqlite3 as the database for Active Record
 group :development do
