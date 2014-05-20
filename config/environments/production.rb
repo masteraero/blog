@@ -1,13 +1,6 @@
 Blog::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['blog1234567'],
-    :access_key_id => ENV['AKIAIAZF5Q3QKJAZVPHQ'],
-    :secret_access_key => ENV['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']
-  }
-}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
