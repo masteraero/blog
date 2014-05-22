@@ -31,6 +31,16 @@
   <%= radio_button_tag(:color, "yellow") %>
   <%= submit_tag("Update color") %>
 <%end%>
+<% if user_signed_in? && !current_user.admin%>
+  <%= form_tag("/say_hi") do %>
+    <%= label_tag('my_password', "Your Admin Password:")%>
+    <%= text_field_tag('my_password')%>
+    <%= submit_tag("Submit")%>
+  <%end%>
+<%end%>
+<% if user_signed_in? && current_user.admin%>
+  <p>You're an admin.</p>
+<% end %>
 
 
 <h3>Cancel my account</h3>

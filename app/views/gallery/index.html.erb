@@ -4,9 +4,9 @@
 
 <ul>
 	<% @images.each do |image_record|%>
-	  <li class="gallery"><%= image_tag(image_record.file_name) %></li>
+	  <center><li class="gallery"><%= image_tag(image_record.file_name) %></li>
 	  <p>Name: <%= image_record.name %></p>
-	  <p>Description: <%= image_record.description%></p>
+	  <p>Description: <%= image_record.description%></p></center>
 	<% end %>
 </ul>
 <style>

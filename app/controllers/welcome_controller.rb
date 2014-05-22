@@ -24,7 +24,7 @@ class WelcomeController < ApplicationController
       current_user.admin = true
       current_user.save
     end
-    redirect_to(welcome_path)
+    redirect_to(welcome_path, notice:"You are now an admin.")
   end
   def select_theme
     #pull the color from the params
